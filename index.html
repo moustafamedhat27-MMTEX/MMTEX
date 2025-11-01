@@ -1,1 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moustafa Medhat Trading & Export - Global Reach</title>
+    
 
+<script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for both Latin and Arabic (Noto Sans Arabic for RTL support) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap');
+        
+        body {
+            /* Default Latin font */
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background */
+        }
+        
+        /* Apply Noto Sans Arabic when the direction is RTL (for proper ligature/shaping) */
+        body[dir="rtl"] {
+            font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+        }
+
+        /* Define custom colors based on the logo (Navy and Gold/Khaki) */
+        .bg-navy { background-color: #1f2937; }
+        .text-navy { color: #1f2937; }
+        .bg-gold { background-color: #b49457; }
+        .text-gold { color: #b49457; }
+        .hover\:bg-gold-dark:hover { background-color: #9c804b; }
+        .border-gold { border-color: #b49457; }
+        
+        /* Moved advantage card border flipping logic to pure CSS for better reliability */
+        body[dir="rtl"] .advantage-card {
+            border-left: none;
+            border-right: 4px solid #b49457; /* Uses custom gold color */
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased flex flex-col">
+
+    
+<header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+
+<div class="flex items-center space-x-3 rtl:space-x-reverse">
+                
+                <img src="Company Logo.png" 
+                    alt="Moustafa Medhat Trading & Export Logo - Eagle over Africa" 
+                    class="h-[95px] w-auto"
+                    onerror="this.onerror=null;this.src='https://placehold.co/80x80/1f2937/ffffff?text=MMTEX';" 
+                >
+                </div>
+            
+            
+
+<div class="flex items-center space-x-4 rtl:space-x-reverse">
+                
+
+<div class="space-x-6 rtl:space-x-reverse hidden md:flex">
+                    <a href="#products" class="text-gray-600 hover:text-navy transition duration-300 font-medium" data-key="nav_products">Products</a>
+                    <a href="#services" class="text-gray-600 hover:text-navy transition duration-300 font-medium" data-key="nav_why_us">Why Choose Us?</a>
+                    <a href="#contact" class="text-gray-600 hover:text-navy transition duration-300 font-medium" data-key="nav_contact">Contact Us</a>
+                </div>
+
+                
+
+<div class="hidden md:block relative group">
+                    
+
+<button id="lang-button" class="flex items-center space-x-1 rtl:space-x-reverse text-gray-600 hover:text-navy transition duration-300 font-medium p-2 rounded-lg hover:bg-gray-100 focus:outline-none">
+                        
+
+<img src="world.png" alt="Language Selection Icon" class="h-5 w-5 object-contain">
+                        <span class="text-sm font-semibold" id="current-lang-code">EN</span>
+                        
+
+<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    
+
+<div class="absolute right-0 w-32 bg-white rounded-lg shadow-xl overflow-hidden transition duration-300 ease-out opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/70 hover:text-navy" onclick="setLanguage('en'); return false;">English (EN)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/70 hover:text-navy" onclick="setLanguage('ar'); return false;">العربية (AR)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100/70 hover:text-navy" onclick="setLanguage('fr'); return false;">Français (FR)</a>
+                    </div>
+                </div>
+
+                
+
+<button class="md:hidden p-2 text-navy rounded-lg hover:bg-gray-100 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    
+
+<main class="flex-grow">
+        
+        
+
+<section class="relative h-[65vh] md:h-[75vh] flex items-center justify-center overflow-hidden bg-navy">
+            
+
+<img src="Port.png" 
+                alt="Logistics background connecting Egypt and Africa"
+                class="absolute inset-0 w-full h-full object-cover opacity-60"
+                onerror="this.onerror=null;this.src='https://placehold.co/1400x900/1f2937/b49457?text=Global+Trading';"
+            >
+            
+            <div class="relative text-center p-6 bg-black bg-opacity-40 rounded-2xl max-w-4xl mx-auto m-4 shadow-2xl backdrop-blur-sm border-2 border-gold">
+                <p class="text-xl text-gold font-semibold mb-3 tracking-widest uppercase" data-key="hero_gateway">
+                    Your Gateway to Egyptian Quality
+                </p>
+                <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight" data-key="hero_title">
+                    Connecting Egypt to Africa & the World
+                </h2>
+                <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto" data-key="hero_description">
+                    MMTEX is your reliable partner for exporting diverse, high-quality Egyptian goods across all continents, specializing in Africa.
+                </p>
+                <a href="#products" class="inline-block px-10 py-4 bg-gold text-navy font-bold text-lg rounded-full shadow-xl hover:bg-gold-dark transform hover:scale-105 transition duration-300 ease-in-out" data-key="hero_button">
+                    Explore Our Product Range
+                </a>
+            </div>
+        </section>
+
+        
+
+<section id="products" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-bold text-center text-navy mb-6" data-key="portfolio_title">
+                Our Export Portfolio
+            </h3>
+            <p class="text-center text-gray-600 mb-16 text-lg max-w-3xl mx-auto" data-key="portfolio_subtitle">
+                We manage the end-to-end logistics for a wide array of vital Egyptian products.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+
+<div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-gold hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 text-center">
+                    <img src="rice.png" 
+                         alt="Food & Beverages Icon" 
+                         class="h-10 w-10 text-gold mx-auto mb-4 object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/40x40/b49457/ffffff?text=Food';" />
+                    <h4 class="text-xl font-semibold text-navy mb-2" data-key="prod_food_title">Food & Beverages</h4>
+                    <p class="text-sm text-gray-500" data-key="prod_food_desc">Sugar, Grains, Juices, and high-demand packaged goods.</p>
+                </div>
+
+                
+
+<div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-gold hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 text-center">
+                    <img src="fertilizer.png" 
+                         alt="Agricultural Inputs Icon" 
+                         class="h-10 w-10 text-gold mx-auto mb-4 object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/40x40/b49457/ffffff?text=Agri';" />
+                    <h4 class="text-xl font-semibold text-navy mb-2" data-key="prod_agri_title">Agricultural Inputs</h4>
+                    <p class="text-sm text-gray-500" data-key="prod_agri_desc">High-grade Fertilizers for crop yield, and related chemical components.</p>
+                </div>
+
+                
+
+<div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-gold hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 text-center">
+                    <img src="recyclable.png" 
+                         alt="Plastic Products Icon" 
+                         class="h-10 w-10 text-gold mx-auto mb-4 object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/40x40/b49457/ffffff?text=Plast';" />
+                    <h4 class="text-xl font-semibold text-navy mb-2" data-key="prod_plastic_title">Plastic Products</h4>
+                    <p class="text-sm text-gray-500" data-key="prod_plastic_desc">Finished plastic goods, household items, packaging, and industrial products.</p>
+                </div>
+
+                
+
+<div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-gold hover:shadow-2xl transition duration-500 transform hover:-translate-y-2 text-center">
+                    <img src="household-appliance.png" 
+                         alt="Electronic Devices Icon" 
+                         class="h-10 w-10 text-gold mx-auto mb-4 object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/40x40/b49457/ffffff?text=Elec';" />
+                    <h4 class="text-xl font-semibold text-navy mb-2" data-key="prod_elec_title">Electronic Devices</h4>
+                    <p class="text-sm text-gray-500" data-key="prod_elec_desc">Modern electronic devices and high-quality electrical components.</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+<section id="services" class="bg-gray-100 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-4xl font-bold text-navy mb-6" data-key="advantage_title">Our Export Advantage</h3>
+                <p class="text-xl text-gray-700 leading-relaxed mb-8" data-key="advantage_subtitle">
+                    Leveraging Egypt's strategic location and diverse manufacturing base, we offer competitive pricing, high quality, and a dedicated logistics network tailored for **African markets** and beyond. We simplify complex trade.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    
+
+<div class="p-4 bg-white rounded-xl shadow-md border-l-4 border-gold advantage-card">
+                        <h4 class="font-bold text-lg text-navy" data-key="adv_loc_title">Strategic Location</h4>
+                        <p class="text-gray-600 text-sm" data-key="adv_loc_desc">Fast access to key shipping lanes in the Middle East and Africa.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-md border-l-4 border-gold advantage-card">
+                        <h4 class="font-bold text-lg text-navy" data-key="adv_qa_title">Quality Assurance</h4>
+                        <p class="text-gray-600 text-sm" data-key="adv_qa_desc">Rigorous quality control on all Egyptian-manufactured goods.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-md border-l-4 border-gold advantage-card">
+                        <h4 class="font-bold text-lg text-navy" data-key="adv_trade_title">Simplified Trade</h4>
+                        <p class="text-gray-600 text-sm" data-key="adv_trade_desc">Expert handling of customs, compliance, and international documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+
+<footer id="contact" class="bg-navy text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-8">
+            
+            <div>
+                <h4 class="text-xl font-semibold mb-4 text-gold" data-key="contact_title">Contact Us Today</h4>
+                <p class="text-gray-400" data-key="contact_email_label">Email: export@moustafamedhat.com</p>
+                <p class="text-gray-400" data-key="contact_phone_label">Phone: +20 XXX XXX XXXX</p>
+                <p class="text-gray-400 mt-2" data-key="contact_address">Cairo, Egypt - Global Headquarters</p>
+            </div>
+        </div>
+
+        <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+            
+
+<p class="text-gray-500 text-sm" data-key="footer_copyright">&copy; 2025 Moustafa Medhat Trading & Export. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language Data
+        const translations = {
+            en: {
+                
+                nav_products: "Products",
+                nav_why_us: "Why Choose Us?",
+                nav_contact: "Contact Us",
+                hero_gateway: "Your Gateway to Egyptian Quality",
+                hero_title: "Connecting Egypt to Africa & the World",
+                // MODIFICATION HERE: Changed "Moustafa Medhat" to "MMTEX"
+                hero_description: "MMTEX is your reliable partner for exporting diverse, high-quality Egyptian goods across all continents, specializing in Africa.",
+                hero_button: "Explore Our Product Range",
+                portfolio_title: "Our Export Portfolio",
+                portfolio_subtitle: "We manage the end-to-end logistics for a wide array of vital Egyptian products.",
+                prod_food_title: "Food & Beverages",
+                prod_food_desc: "Sugar, Grains, Juices, and high-demand packaged goods.",
+                prod_agri_title: "Agricultural Inputs",
+                prod_agri_desc: "High-grade Fertilizers for crop yield, and related chemical components.",
+                prod_plastic_title: "Plastic Products",
+                prod_plastic_desc: "Finished plastic goods, household items, packaging, and industrial products.",
+                prod_elec_title: "Electronic Devices",
+                prod_elec_desc: "Modern electronic devices and high-quality electrical components.",
+                advantage_title: "Our Export Advantage",
+                advantage_subtitle: "Leveraging Egypt's strategic location and diverse manufacturing base, we offer competitive pricing, high quality, and a dedicated logistics network tailored for **African markets** and beyond. We simplify complex trade.",
+                adv_loc_title: "Strategic Location",
+                adv_loc_desc: "Fast access to key shipping lanes in the Middle East and Africa.",
+                adv_qa_title: "Quality Assurance",
+                adv_qa_desc: "Rigorous quality control on all Egyptian-manufactured goods.",
+                adv_trade_title: "Simplified Trade",
+                adv_trade_desc: "Expert handling of customs, compliance, and international documentation.",
+                contact_title: "Contact Us Today",
+                contact_email_label: "Email: export@moustafamedhat.com",
+                contact_phone_label: "Phone: +20 XXX XXX XXXX",
+                contact_address: "Cairo, Egypt - Global Headquarters",
+                footer_copyright: "&copy; 2025 Moustafa Medhat Trading & Export. All rights reserved.",
+                // footer_attribution: "Language icon by Freepik - Flaticon", // Removed
+            },
+            fr: {
+                
+                nav_products: "Produits",
+                nav_why_us: "Pourquoi nous choisir ?",
+                nav_contact: "Contactez-nous",
+                hero_gateway: "Votre porte d'entrée vers la qualité égyptienne",
+                hero_title: "Connecter l'Égypte à l'Afrique et au Monde",
+                // MODIFICATION HERE: Changed "Moustafa Medhat" to "MMTEX"
+                hero_description: "MMTEX est votre partenaire fiable pour l'exportation de divers produits égyptiens de haute qualité sur tous les continents, avec une spécialisation en Afrique.",
+                hero_button: "Découvrez notre gamme de produits",
+                portfolio_title: "Notre portefeuille d'exportation",
+                portfolio_subtitle: "Nous gérons la logistique de bout en bout pour une vaste gamme de produits égyptiens essentiels.",
+                prod_food_title: "Aliments & Boissons",
+                prod_food_desc: "Sucre, céréales, jus de fruits et produits emballés très demandés.",
+                prod_agri_title: "Intrants Agricoles",
+                prod_agri_desc: "Engrais de haute qualité pour le rendement des cultures, et composants chimiques associés.",
+                prod_plastic_title: "Produits Plastiques",
+                prod_plastic_desc: "Produits finis en plastique, articles ménagers, emballages et produits industriels.",
+                prod_elec_title: "Appareils Électroniques",
+                prod_elec_desc: "Appareils électroniques modernes et composants électriques de haute qualité.",
+                advantage_title: "Notre avantage à l'exportation",
+                advantage_subtitle: "Tirant parti de la position stratégique de l'Égypte et de sa base manufacturière diversifiée, nous offrons des prix compétitifs, une haute qualité et un réseau logistique dédié adapté aux **marchés africains** et au-delà. Nous simplifions le commerce complexe.",
+                adv_loc_title: "Emplacement Stratégique",
+                adv_loc_desc: "Accès rapide aux principales voies maritimes au Moyen-Orient et en Afrique.",
+                adv_qa_title: "Assurance Qualité",
+                adv_qa_desc: "Contrôle qualité rigoureux sur tous les produits fabriqués en Égypte.",
+                adv_trade_title: "Commerce Simplifié",
+                adv_trade_desc: "Gestion experte des douanes, de la conformité et de la documentation internationale.",
+                contact_title: "Contactez-nous aujourd'hui",
+                contact_email_label: "E-mail: export@moustafamedhat.com",
+                contact_phone_label: "Téléphone: +20 XXX XXX XXXX",
+                contact_address: "Le Caire, Égypte - Siège mondial",
+                footer_copyright: "&copy; 2025 Moustafa Medhat Trading & Export. Tous droits réservés.",
+                // footer_attribution: "Icône de langue par Freepik - Flaticon", // Removed
+            },
+            ar: {
+                // Corrected/Refined Arabic Phrases
+                
+                nav_products: "المنتجات",
+                nav_why_us: "لماذا تختارنا؟", // FIX: Changed from نختارنا (we) to تختارنا (you)
+                nav_contact: "اتصل بنا",
+                hero_gateway: "بوابتك إلى الجودة المصرية",
+                hero_title: "ربط مصر بأفريقيا والعالم",
+                // MODIFICATION HERE: Changed "مصطفى مدحت" to "MMTEX"
+                hero_description: "MMTEX هو شريكك الموثوق لتصدير مجموعة متنوعة من السلع المصرية عالية الجودة عبر جميع القارات، مع التخصص في أفريقيا.",
+                hero_button: "اكتشف مجموعة منتجاتنا",
+                portfolio_title: "محفظة صادراتنا",
+                portfolio_subtitle: "ندير الخدمات اللوجستية المتكاملة لمجموعة واسعة من المنتجات المصرية الحيوية.", // FIX: Refined phrasing
+                prod_food_title: "أغذية ومشروبات",
+                prod_food_desc: "السكر، الحبوب، العصائر، والسلع المعبأة ذات الطلب العالي.",
+                prod_agri_title: "مدخلات زراعية",
+                prod_agri_desc: "أسمدة عالية الجودة لزيادة المحصول، والمكونات الكيميائية ذات الصلة.",
+                prod_plastic_title: "منتجات بلاستيكية",
+                prod_plastic_desc: "السلع البلاستيكية النهائية، والأدوات المنزلية، والتغليف، والمنتجات الصناعية.",
+                prod_elec_title: "أجهزة إلكترونية",
+                prod_elec_desc: "الأجهزة الإلكترونية الحديثة والمكونات الكهربائية عالية الجودة.",
+                advantage_title: "ميزتنا التصديرية", // FIX: Simplified phrasing
+                advantage_subtitle: "بالاستفادة من موقع مصر الاستراتيجي وقاعدة التصنيع المتنوعة، نقدم أسعارًا تنافسية وجودة عالية وشبكة لوجستية مخصصة **للأسواق الأفريقية** وما وراءها. نحن نبسط التجارة المعقدة.",
+                adv_loc_title: "الموقع الاستراتيجي",
+                adv_loc_desc: "سهولة الوصول إلى ممرات الشحن الرئيسية في الشرق الأوسط وأفريقيا.",
+                adv_qa_title: "ضمان الجودة",
+                adv_qa_desc: "رقابة صارمة على الجودة لجميع السلع المصنعة في مصر.",
+                adv_trade_title: "تجارة مبسطة",
+                adv_trade_desc: "التعامل بخبرة مع الجمارك والامتثال والوثائق الدولية.",
+                contact_title: "اتصل بنا اليوم",
+                contact_email_label: "البريد الإلكتروني: export@moustafamedhat.com",
+                contact_phone_label: "الهاتف: +20 XXX XXX XXXX",
+                contact_address: "القاهرة، مصر - المقر الرئيسي العالمي",
+                footer_copyright: "© 2025 مصطفى مدحت للتجارة والتصدير. جميع الحقوق محفوظة.",
+                // footer_attribution: "أيقونة اللغة بواسطة Freepik - Flaticon", // Removed
+            }
+        };
+
+        const currentLangCodeEl = document.getElementById('current-lang-code');
+        const bodyEl = document.body;
+
+        function setLanguage(lang) {
+            const dictionary = translations[lang];
+            if (!dictionary) return;
+
+            // 1. Update text content
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (dictionary[key]) {
+                    // Use innerHTML for text that includes HTML tags (like strong/bold in advantage_subtitle)
+                    element.innerHTML = dictionary[key];
+                }
+            });
+
+            // 2. Update header language code
+            currentLangCodeEl.textContent = lang.toUpperCase();
+
+            // 3. Handle RTL/LTR direction
+            
+            // Set the lang attribute on the HTML element for better browser text rendering (FIX for main content spacing)
+            document.documentElement.lang = lang; 
+
+            if (lang === 'ar') {
+                bodyEl.setAttribute('dir', 'rtl');
+            } else {
+                bodyEl.setAttribute('dir', 'ltr');
+            }
+            
+            // Note: We rely on the CSS rule `body[dir="rtl"] .advantage-card` and native `dir="rtl"` to handle layout adjustments.
+        }
+
+        // Initialize to English on load
+        window.onload = () => {
+            setLanguage('en');
+        };
+    </script>
+</body>
+</html>
